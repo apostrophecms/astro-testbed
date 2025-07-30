@@ -48,14 +48,14 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@apostrophecms-pro/advanced-permission": "^3.0.4",
-    "@apostrophecms-pro/doc-template-library": "^2.2.4",
-    "@apostrophecms-pro/document-versions": "^2.5.0",
-    "@apostrophecms-pro/palette": "^4.6.0",
-    "@apostrophecms/mongodb-snapshot": "^1.1.0",
-    "@apostrophecms/seo": "^1.3.0",
-    "@apostrophecms/vite": "^1.0.0",
-    "apostrophe": "^4.12.0",
+    "@apostrophecms-pro/advanced-permission": "apostrophecms/advanced-permission",
+    "@apostrophecms-pro/doc-template-library": "apostrophecms/doc-template-library",
+    "@apostrophecms-pro/document-versions": "apostrophecms/document-versions",
+    "@apostrophecms-pro/palette": "apostrophecms/palette",
+    "@apostrophecms/mongodb-snapshot": "apostrophecms/mongodb-snapshot",
+    "@apostrophecms/seo": "apostrophecms/seo",
+    "@apostrophecms/vite": "apostrophecms/vite",
+    "apostrophe": "apostrophecms/apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
