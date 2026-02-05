@@ -1,23 +1,23 @@
 {
-  "name": "combined-astro-starter-kit",
+  "name": "astro-testbed",
   "version": "1.0.0",
-  "description": "Combined ApostropheCMS plus Astro starter kit",
+  "description": "Testbed for ApostropheCMS + Astro",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run install-frontend && npm run install-backend && echo '\\n💡 combined npm install complete'",
-    "install-frontend": "cd frontend && echo '\\n💡 running npm install in frontend/' && npm install",
-    "install-backend": "cd backend && echo '\\n💡 running npm install in backend/' && npm install",
-    "update": "npm run update-frontend && npm run update-backend && echo '\\n💡 combined npm update complete'",
-    "update-frontend": "cd frontend && echo '\\n💡 running npm update in frontend/' && npm update",
-    "update-backend": "cd backend && echo '\\n💡 running npm update in backend/' && npm update",
-    "build": "npm run build-frontend && npm run build-backend && echo '\\n💡 combined npm build complete'",
-    "build-frontend": "cd frontend && echo '\\n💡 running npm run build in frontend/' && npm run build",
-    "build-backend": " cd backend && echo '\\n💡 running npm run build in backend/' && npm run build",
-    "migrate": "cd backend && npm run migrate",
-    "serve-frontend": "cd frontend && npm run serve",
-    "serve-backend": "cd backend && npm run serve",
-    "load-starter-content": "cd backend && npm run load-starter-content"
+    "postinstall": "pnpm install-frontend && pnpm install-backend && echo '\\n💡 combined pnpm install complete'",
+    "install-frontend": "cd frontend && echo '\\n💡 running pnpm install in frontend/' && pnpm install",
+    "install-backend": "cd backend && echo '\\n💡 running pnpm install in backend/' && pnpm install",
+    "update": "pnpm update-frontend && pnpm update-backend && echo '\\n💡 combined pnpm update complete'",
+    "update-frontend": "cd frontend && echo '\\n💡 running pnpm update in frontend/' && pnpm update",
+    "update-backend": "cd backend && echo '\\n💡 running pnpm update in backend/' && pnpm update",
+    "build": "pnpm build-frontend && pnpm build-backend && echo '\\n💡 combined pnpm build complete'",
+    "build-frontend": "cd frontend && echo '\\n💡 running pnpm build in frontend/' && pnpm build",
+    "build-backend": " cd backend && echo '\\n💡 running pnpm build in backend/' && pnpm build",
+    "migrate": "cd backend && pnpm migrate",
+    "serve-frontend": "cd frontend && pnpm serve",
+    "serve-backend": "cd backend && pnpm serve",
+    "load-starter-content": "cd backend && pnpm load-starter-content"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/apostrophecms/combined-astro-starter-kit/issues"
   },
-  "homepage": "https://github.com/apostrophecms/combined-astro-starter-kit#readme"
+  "homepage": "https://github.com/apostrophecms/combined-astro-starter-kit#readme",
+  "packageManager": "pnpm@10.18.0"
 }
