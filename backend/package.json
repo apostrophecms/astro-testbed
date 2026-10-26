@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon",
+    "dev": "APOS_EXTERNAL_FRONT_KEY=dev nodemon",
     "build": "NODE_ENV=production node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
-    "release": "pnpm install && pnpm run build && pnpm run migrate",
+    "release": "pnpm install && pnpm build && pnpm migrate",
     "migrate": "NODE_ENV=production node app @apostrophecms/migration:migrate",
     "load-starter-content": "./scripts/load-starter-content",
     "update-starter-content": "./scripts/update-starter-content",
@@ -51,7 +51,6 @@
     "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
     "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
-    "@apostrophecms-pro/palette": "github:apostrophecms/palette",
     "@apostrophecms/mongodb-snapshot": "github:apostrophecms/apostrophe#main&path:packages/mongodb-snapshot",
     "@apostrophecms/seo": "github:apostrophecms/apostrophe#main&path:packages/seo",
     "@apostrophecms/vite": "github:apostrophecms/apostrophe#main&path:packages/vite",
@@ -68,10 +67,15 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "better-sqlite3",
+      "cypress",
       "esbuild",
+      "puppeteer",
       "sharp",
       "unrs-resolver",
       "vue-demi"
+    ],
+    "ignoredBuiltDependencies": [
+      "protobufjs"
     ]
   }
 }
