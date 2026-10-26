@@ -12,11 +12,11 @@
     "release": "pnpm install && pnpm build && pnpm migrate",
     "migrate": "NODE_ENV=production node app @apostrophecms/migration:migrate",
     "load-starter-content": "./scripts/load-starter-content",
-    "update-starter-content": "./scripts/update-starter-content"
+    "update-starter-content": "./scripts/update-starter-content",
+    "lint": "eslint ."
   },
   "engines": {
-    "node": "^18.17.1 || ^20.3.0 || >=22.0.0",
-    "npm": ">=9.0.0"
+    "node": "^18.17.1 || ^20.3.0 || >=22.0.0"
   },
   "nodemonConfig": {
     "delay": 1000,
@@ -58,7 +58,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
+    "eslint": "^9.39.5",
     "eslint-config-apostrophe": "github:apostrophecms/apostrophe#main&path:packages/eslint-config-apostrophe",
     "nodemon": "^3.0.1"
   },
@@ -66,6 +66,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
+      "better-sqlite3",
       "cypress",
       "esbuild",
       "puppeteer",

@@ -17,7 +17,8 @@
     "migrate": "cd backend && pnpm migrate",
     "serve-frontend": "cd frontend && pnpm serve",
     "serve-backend": "cd backend && pnpm serve",
-    "load-starter-content": "cd backend && pnpm load-starter-content"
+    "load-starter-content": "cd backend && pnpm load-starter-content",
+    "dev": "concurrently --names \"backend,frontend\" --prefix-colors \"blue,green\" \"pnpm --dir backend dev\" \"pnpm --dir frontend dev\""
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,8 @@
     "url": "https://github.com/apostrophecms/combined-astro-starter-kit/issues"
   },
   "homepage": "https://github.com/apostrophecms/combined-astro-starter-kit#readme",
-  "packageManager": "pnpm@10.18.0"
+  "packageManager": "pnpm@10.18.0",
+  "dependencies": {
+    "concurrently": "^10.0.6"
+  }
 }

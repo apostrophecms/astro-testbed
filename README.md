@@ -18,11 +18,11 @@ Overall, this project utilizes ApostropheCMS as a headless backend with Astro as
 ### Getting Started
 The codebases located in the `backend` and `frontend` folders should be treated as interlinked but separate projects.
 
-To simplify dependency management, this repository includes several root-level scripts for convenience. The `postinstall` script automatically installs dependencies for both the `frontend` and `backend` folders when you run `npm install` at the root. Additionally, you can use the update script to run `npm update` in both codebases, and the `build` script to build both projects.
+To simplify dependency management, this repository includes several root-level scripts for convenience. The `postinstall` script automatically installs dependencies for both the `frontend` and `backend` folders when you run `pnpm install` at the root. Additionally, you can use the update script to run `pnpm update` in both codebases, and the `build` script to build both projects.
 
 #### For Local Development
-- To start, execute `npm install` from a terminal in the root of this repo.
-- Next, run `npm run load-starter-content` to fetch a starter database and a little bit of starter media to go with it. You will also be prompted to set an admin password.
+- To start, execute `pnpm install` from a terminal in the root of this repo.
+- Next, run `pnpm run load-starter-content` to fetch a starter database and a little bit of starter media to go with it. You will also be prompted to set an admin password.
 - Open terminals:
  - Mac/Linux users: Open one terminal in `frontend` folder and one in `backend` folder
  - Windows users:
@@ -30,8 +30,8 @@ To simplify dependency management, this repository includes several root-level s
    - Open a WSL terminal for `frontend` folder (optional - can also use Windows)
 - Each project needs to be provided with an `APOS_EXTERNAL_FRONT_KEY` environment variable set to the same string value in order to authenticate communication. For example, in each terminal execute `export APOS_EXTERNAL_FRONT_KEY=my-secret-key`.
 - The `astro.config.mjs` file is already set to the normal default values, but if you are running the backend server on a different port, you will also have to set the `APOS_HOST` environment variable.
-- Then, you can start the projects using the accompanying scripts. For example, in a local development environment you can start each with `npm run dev`.
-  > Note: Astro is much less stringent about project setup when running in development mode. It is recommended that you run the `npm run build` followed by the `npm run preview` commands in the `frontend` folder containing the Astro portion of your project to test that it behaves as expected before deployment. We do not recommend starting the project using the root `npm run serve-frontend` script during development, this script is used for Apostrophe hosting.
+- Then, you can start the projects using the accompanying scripts. For example, in a local development environment you can start each with `pnpm run dev`.
+  > Note: Astro is much less stringent about project setup when running in development mode. It is recommended that you run the `pnpm run build` followed by the `pnpm run preview` commands in the `frontend` folder containing the Astro portion of your project to test that it behaves as expected before deployment. We do not recommend starting the project using the root `pnpm run serve-frontend` script during development, this script is used for Apostrophe hosting.
 
 #### If you don't want to use the starter content
 If you prefer to start with an empty database, you can just add an admin user instead.
@@ -284,7 +284,7 @@ If your changes are not reflected:
 
 ## Root `package.json` scripts
 
-The root of the project has several useful scripts located in the `package.json` file. Running `npm run install` in the root directory will trigger the `postinstall` script. This will install the dependencies for both the ApostropheCMS and Astro projects. Similarly, `npm run update` will update dependencies for both the `frontend` and `backend` folders. The rest of the scripts in this file are primarily used for project deployment to Apostrophe hosting.
+The root of the project has several useful scripts located in the `package.json` file. Running `pnpm run install` in the root directory will trigger the `postinstall` script. This will install the dependencies for both the ApostropheCMS and Astro projects. Similarly, `pnpm run update` will update dependencies for both the `frontend` and `backend` folders. The rest of the scripts in this file are primarily used for project deployment to Apostrophe hosting.
 
 ## Frontend folder scripts
 
@@ -353,7 +353,7 @@ There are a number of tutorials in the [Astro documentation](https://docs.astro.
 2. Create a new site by connecting your Git repository.
 3. In the "Build settings" configuration:
    - **Base directory**: `frontend`
-   - **Build command**: `npm run build`
+   - **Build command**: `pnpm run build`
    - **Publish directory**: `frontend/dist`
 4. Access Site Settings:
    -Navigate to the "Site settings" for the selected site.

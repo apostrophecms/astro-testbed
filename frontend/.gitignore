@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# lockfiles are not committed so each deploy tests our latest
+package-lock.json
+pnpm-lock.yaml

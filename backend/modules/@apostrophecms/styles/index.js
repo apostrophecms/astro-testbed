@@ -11,7 +11,7 @@ export default {
     group: {
       colors: {
         label: 'Colors',
-        fields: ['backgroundColor']
+        fields: [ 'backgroundColor' ]
       }
     }
   }

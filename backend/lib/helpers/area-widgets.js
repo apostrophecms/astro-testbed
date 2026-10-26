@@ -78,7 +78,7 @@ export const widgetGroups = {
  * @param {boolean} options.includeLayouts - If true, includes layout widgets in the groups
  * @param {Array<string>} options.exclude - Array of widget names to exclude
  * @returns {Object} Returns the groups configuration object
- * 
+ *
  * @example
  * // In your page type or piece type:
  * fields: {
@@ -113,7 +113,7 @@ export const getWidgetGroups = ({
       // Filter out any excluded widgets
       widgets: Object.fromEntries(
         Object.entries(widgetGroups.layout.widgets)
-          .filter(([key]) => !exclude.includes(key))
+          .filter(([ key ]) => !exclude.includes(key))
       )
     };
   }
@@ -124,7 +124,7 @@ export const getWidgetGroups = ({
     // Filter out any excluded widgets
     widgets: Object.fromEntries(
       Object.entries(widgetGroups.content.widgets)
-        .filter(([key]) => !exclude.includes(key))
+        .filter(([ key ]) => !exclude.includes(key))
     )
   };
 

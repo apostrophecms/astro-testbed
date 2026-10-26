@@ -12,8 +12,7 @@
     "astro": "astro"
   },
   "engines": {
-    "node": "^18.17.1 || ^20.3.0 || >=22.0.0",
-    "npm": ">=9.0.0"
+    "node": "^18.17.1 || ^20.3.0 || >=22.0.0"
   },
   "dependencies": {
     "@apostrophecms/apostrophe-astro": "github:apostrophecms/apostrophe#main&path:packages/apostrophe-astro",
@@ -32,5 +31,13 @@
   "devDependencies": {
     "sass-embedded": "^1.81.0"
   },
-  "packageManager": "pnpm@10.18.0"
+  "packageManager": "pnpm@10.18.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp",
+      "vue-demi"
+    ]
+  }
 }
