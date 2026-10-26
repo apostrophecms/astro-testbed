@@ -9,14 +9,14 @@
     "dev": "nodemon",
     "build": "NODE_ENV=production node app @apostrophecms/asset:build",
     "serve": "NODE_ENV=production node app",
-    "release": "npm install && npm run build && npm run migrate",
+    "release": "pnpm install && pnpm run build && pnpm run migrate",
     "migrate": "NODE_ENV=production node app @apostrophecms/migration:migrate",
     "load-starter-content": "./scripts/load-starter-content",
-    "update-starter-content": "./scripts/update-starter-content"
+    "update-starter-content": "./scripts/update-starter-content",
+    "lint": "eslint ."
   },
   "engines": {
-    "node": "^18.17.1 || ^20.3.0 || >=22.0.0",
-    "npm": ">=9.0.0"
+    "node": "^18.17.1 || ^20.3.0 || >=22.0.0"
   },
   "nodemonConfig": {
     "delay": 1000,
@@ -48,19 +48,30 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "@apostrophecms-pro/advanced-permission": "apostrophecms/advanced-permission",
-    "@apostrophecms-pro/doc-template-library": "apostrophecms/doc-template-library",
-    "@apostrophecms-pro/document-versions": "apostrophecms/document-versions",
-    "@apostrophecms-pro/palette": "apostrophecms/palette",
-    "@apostrophecms/mongodb-snapshot": "apostrophecms/mongodb-snapshot",
-    "@apostrophecms/seo": "apostrophecms/seo",
-    "@apostrophecms/vite": "apostrophecms/vite",
-    "apostrophe": "apostrophecms/apostrophe",
+    "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
+    "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
+    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
+    "@apostrophecms-pro/palette": "github:apostrophecms/palette",
+    "@apostrophecms/mongodb-snapshot": "github:apostrophecms/apostrophe#main&path:packages/mongodb-snapshot",
+    "@apostrophecms/seo": "github:apostrophecms/apostrophe#main&path:packages/seo",
+    "@apostrophecms/vite": "github:apostrophecms/apostrophe#main&path:packages/vite",
+    "apostrophe": "github:apostrophecms/apostrophe#main&path:packages/apostrophe",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "eslint-config-apostrophe": "^4.0.0",
+    "eslint": "^9.39.5",
+    "eslint-config-apostrophe": "github:apostrophecms/apostrophe#main&path:packages/eslint-config-apostrophe",
     "nodemon": "^3.0.1"
+  },
+  "packageManager": "pnpm@10.18.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "better-sqlite3",
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "vue-demi"
+    ]
   }
 }

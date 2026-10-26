@@ -92,11 +92,26 @@ export default {
           type: 'select',
           label: 'Maximum Content Width',
           choices: [
-            { label: 'Full Width', value: '' },
-            { label: 'Extra Narrow (768px)', value: 'max-width-768' },
-            { label: 'Narrow (960px)', value: 'max-width-960' },
-            { label: 'Medium (1152px)', value: 'max-width-1152' },
-            { label: 'Wide (1344px)', value: 'max-width-1344' }
+            {
+              label: 'Full Width',
+              value: ''
+            },
+            {
+              label: 'Extra Narrow (768px)',
+              value: 'max-width-768'
+            },
+            {
+              label: 'Narrow (960px)',
+              value: 'max-width-960'
+            },
+            {
+              label: 'Medium (1152px)',
+              value: 'max-width-1152'
+            },
+            {
+              label: 'Wide (1344px)',
+              value: 'max-width-1344'
+            }
           ],
           def: ''
         },
@@ -129,10 +144,22 @@ export default {
                 type: 'select',
                 label: 'Vertical Alignment',
                 choices: [
-                  { label: 'Top', value: 'start' },
-                  { label: 'Center', value: 'center' },
-                  { label: 'Bottom', value: 'end' },
-                  { label: 'Stretch', value: 'stretch' }
+                  {
+                    label: 'Top',
+                    value: 'start'
+                  },
+                  {
+                    label: 'Center',
+                    value: 'center'
+                  },
+                  {
+                    label: 'Bottom',
+                    value: 'end'
+                  },
+                  {
+                    label: 'Stretch',
+                    value: 'stretch'
+                  }
                 ],
                 def: 'start'
               },
@@ -140,10 +167,22 @@ export default {
                 type: 'select',
                 label: 'Horizontal Alignment',
                 choices: [
-                  { label: 'Left', value: 'start' },
-                  { label: 'Center', value: 'center' },
-                  { label: 'Right', value: 'end' },
-                  { label: 'Stretch', value: 'stretch' }
+                  {
+                    label: 'Left',
+                    value: 'start'
+                  },
+                  {
+                    label: 'Center',
+                    value: 'center'
+                  },
+                  {
+                    label: 'Right',
+                    value: 'end'
+                  },
+                  {
+                    label: 'Stretch',
+                    value: 'stretch'
+                  }
                 ],
                 def: 'stretch'
               },
@@ -570,10 +609,22 @@ export default {
                       type: 'select',
                       label: 'Vertical Alignment',
                       choices: [
-                        { label: 'Top', value: 'start' },
-                        { label: 'Center', value: 'center' },
-                        { label: 'Bottom', value: 'end' },
-                        { label: 'Stretch', value: 'stretch' }
+                        {
+                          label: 'Top',
+                          value: 'start'
+                        },
+                        {
+                          label: 'Center',
+                          value: 'center'
+                        },
+                        {
+                          label: 'Bottom',
+                          value: 'end'
+                        },
+                        {
+                          label: 'Stretch',
+                          value: 'stretch'
+                        }
                       ],
                       def: 'start'
                     },
@@ -591,7 +642,7 @@ export default {
         addOverride: {
           type: 'boolean',
           label: 'Add CSS target override?',
-          help: 'Check this box to add an additional class for custom CSS targeting.',
+          help: 'Check this box to add an additional class for custom CSS targeting.'
         },
         overrideClass: {
           type: 'string',

@@ -5,19 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run install-frontend && npm run install-backend && echo '\\n💡 combined npm install complete'",
-    "install-frontend": "cd frontend && echo '\\n💡 running npm install in frontend/' && npm install",
-    "install-backend": "cd backend && echo '\\n💡 running npm install in backend/' && npm install",
-    "update": "npm run update-frontend && npm run update-backend && echo '\\n💡 combined npm update complete'",
-    "update-frontend": "cd frontend && echo '\\n💡 running npm update in frontend/' && npm update",
-    "update-backend": "cd backend && echo '\\n💡 running npm update in backend/' && npm update",
-    "build": "npm run build-frontend && npm run build-backend && echo '\\n💡 combined npm build complete'",
-    "build-frontend": "cd frontend && echo '\\n💡 running npm run build in frontend/' && npm run build",
-    "build-backend": " cd backend && echo '\\n💡 running npm run build in backend/' && npm run build",
-    "migrate": "cd backend && npm run migrate",
-    "serve-frontend": "cd frontend && npm run serve",
-    "serve-backend": "cd backend && npm run serve",
-    "load-starter-content": "cd backend && npm run load-starter-content"
+    "postinstall": "pnpm run install-frontend && pnpm run install-backend && echo '\\n💡 combined pnpm install complete'",
+    "install-frontend": "cd frontend && echo '\\n💡 running pnpm install in frontend/' && pnpm install",
+    "install-backend": "cd backend && echo '\\n💡 running pnpm install in backend/' && pnpm install",
+    "update": "pnpm run update-frontend && pnpm run update-backend && echo '\\n💡 combined pnpm update complete'",
+    "update-frontend": "cd frontend && echo '\\n💡 running pnpm update in frontend/' && pnpm update",
+    "update-backend": "cd backend && echo '\\n💡 running pnpm update in backend/' && pnpm update",
+    "build": "pnpm run build-frontend && pnpm run build-backend && echo '\\n💡 combined pnpm build complete'",
+    "build-frontend": "cd frontend && echo '\\n💡 running pnpm run build in frontend/' && pnpm run build",
+    "build-backend": "cd backend && echo '\\n💡 running pnpm run build in backend/' && pnpm run build",
+    "migrate": "cd backend && pnpm run migrate",
+    "serve-frontend": "cd frontend && pnpm run serve",
+    "serve-backend": "cd backend && pnpm run serve",
+    "load-starter-content": "cd backend && pnpm run load-starter-content",
+    "dev": "concurrently --names \"backend,frontend\" --prefix-colors \"blue,green\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,9 @@
   "bugs": {
     "url": "https://github.com/apostrophecms/combined-astro-starter-kit/issues"
   },
-  "homepage": "https://github.com/apostrophecms/combined-astro-starter-kit#readme"
+  "homepage": "https://github.com/apostrophecms/combined-astro-starter-kit#readme",
+  "packageManager": "pnpm@10.18.0",
+  "dependencies": {
+    "concurrently": "^10.0.6"
+  }
 }
