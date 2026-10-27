@@ -10,7 +10,7 @@ Overall, this project utilizes ApostropheCMS as a headless backend with Astro as
 ## Using this project
 
 ### Prerequisites
-- Node.js v18 or later
+- Node.js v22.23.4 or later (required by Astro 7)
 - MongoDB v6.0 or later (local server or Atlas). See the [ApostropheCMS documentation](https://docs.apostrophecms.org/guide/development-setup.html) for setup.
 - Windows users: We require using Windows Subsystem for Linux 2 (WSL2) for Apostrophe development. This ensures consistent behavior with our image processing tools and file system operations. [Learn more about setting up WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
 
@@ -317,7 +317,7 @@ Third-party hosting will typically require separate servers for the ApostropheCM
 ### Backend (ApostropheCMS) Deployment
 
 Your ApostropheCMS backend requires:
-- Node.js environment (v20 or later recommended)
+- Node.js environment (v22.23.4 or later)
 - MongoDB database
 - Asset storage solution (cloud storage like AWS S3)
 
