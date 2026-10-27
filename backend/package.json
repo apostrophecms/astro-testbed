@@ -50,7 +50,6 @@
   "dependencies": {
     "@apostrophecms-pro/advanced-permission": "github:apostrophecms/advanced-permission",
     "@apostrophecms-pro/doc-template-library": "github:apostrophecms/doc-template-library",
-    "@apostrophecms-pro/document-versions": "github:apostrophecms/document-versions",
     "@apostrophecms/mongodb-snapshot": "github:apostrophecms/apostrophe#main&path:packages/mongodb-snapshot",
     "@apostrophecms/seo": "github:apostrophecms/apostrophe#main&path:packages/seo",
     "@apostrophecms/vite": "github:apostrophecms/apostrophe#main&path:packages/vite",
@@ -60,7 +59,7 @@
   "devDependencies": {
     "eslint": "^9.39.5",
     "eslint-config-apostrophe": "github:apostrophecms/apostrophe#main&path:packages/eslint-config-apostrophe",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.14"
   },
   "packageManager": "pnpm@10.18.0",
   "pnpm": {

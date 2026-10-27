@@ -1,11 +1,23 @@
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import apostrophe from '@apostrophecms/apostrophe-astro';
-import path from 'path';
+
+// Hostnames Astro may trust in X-Forwarded-Host. Behind a proxy, Astro builds
+// the request origin for its CSRF check from that header; without a match,
+// same-host form posts, uploads and logout are rejected as cross-site
+const allowedDomains = (process.env.APOS_ALLOWED_DOMAINS || '**.apos.dev')
+  .split(',')
+  .map(hostname => ({
+    hostname: hostname.trim(),
+    protocol: 'https'
+  }));
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
+  security: {
+    allowedDomains
+  },
   server: {
     port: process.env.PORT ? parseInt(process.env.PORT) : 4321,
     // Required for some hosting, like Heroku
@@ -42,13 +54,6 @@ export default defineConfig({
       // Do not externalize the @apostrophecms/apostrophe-astro plugin, we need
       // to be able to use virtual: URLs there
       noExternal: ['@apostrophecms/apostrophe-astro']
-    }
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler',
-      }
     }
   }
 });
